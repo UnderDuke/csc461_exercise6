@@ -182,7 +182,7 @@ function renderTriangles() {
     
     // define the modeling matrix for the first set 
     inputTriangles[0].mMatrix = mat4.create(); // modeling mat for tri set
-    var setCenter = vec3.fromValues(.75,.25,0);  // center coords of tri set 
+    var setCenter = vec3.fromValues(.05,30,0);  // center coords of tri set 
     mat4.fromTranslation(inputTriangles[0].mMatrix,vec3.negate(vec3.create(),setCenter)); // translate to origin
     mat4.multiply(inputTriangles[0].mMatrix,
                   mat4.fromRotation(mat4.create(),Math.PI/2,vec3.fromValues(0,0,1)),
@@ -196,6 +196,7 @@ function renderTriangles() {
         
     // define the modeling matrix for the second set
     inputTriangles[1].mMatrix = mat4.create();
+    var setCenter2 = vec3.fromValues(.15,.15,0);  // center coords of tri set 
     mat4.multiply(inputTriangles[1].mMatrix,
                   mat4.fromRotation(mat4.create(),Math.PI/4,vec3.fromValues(0,0,1)),
                   inputTriangles[1].mMatrix); // rotate 45 degs
