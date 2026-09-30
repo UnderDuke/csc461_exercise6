@@ -190,12 +190,12 @@ function renderTriangles() {
     mat4.multiply(inputTriangles[0].mMatrix,
                   mat4.fromTranslation(mat4.create(),setCenter),
                   inputTriangles[0].mMatrix); // move back to center
-    mat4.multiply(inputTriangles[1].mMatrix,
-                  mat4.fromRotation(mat4.create(),Math.PI/4,vec3.fromValues(0,0,1)),
-                  inputTriangles[1].mMatrix); // rotate 90 degs
         
     // define the modeling matrix for the second set
     inputTriangles[1].mMatrix = mat4.create();
+    mat4.multiply(inputTriangles[1].mMatrix,
+                  mat4.fromRotation(mat4.create(),Math.PI/4,vec3.fromValues(0,0,1)),
+                  inputTriangles[1].mMatrix); // rotate 45 degs
     
     for (var whichTriSet=0; whichTriSet<numTriangleSets; whichTriSet++) { 
         
