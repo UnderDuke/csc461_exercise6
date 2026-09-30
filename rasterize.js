@@ -210,7 +210,7 @@ function renderTriangles() {
                   mat4.fromTranslation(mat4.create(),setCenter),
                   inputTriangles[1].mMatrix); // move back to center
     mat4.multiply(inputTriangles[1].mMatrix,
-                  mat4.fromTranslation(mat4.create(),vec3.fromValues(-1.2, -1.0, 0.0)),
+                  mat4.fromTranslation(mat4.create(),vec3.fromValues(-1.6, -0.7, 0.0)),
                   inputTriangles[1].mMatrix); // move back to center
     
     for (var whichTriSet=0; whichTriSet<numTriangleSets; whichTriSet++) { 
